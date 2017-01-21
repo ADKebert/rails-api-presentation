@@ -10,13 +10,20 @@ class CookieJar extends Component {
       'flexWrap' : 'wrap',
     }
 
+    const CookieList = [
+      "Oreo",
+      "Oatmeal",
+      "Sugar",
+      "Chocolate",
+    ];
+
+    var theCookies = CookieList.map(function(cookie) {
+      return <Cookie name={cookie} />;
+    });
+
     return(
       <div style={CookieJarStyle}>
-        <Cookie name="Oreo" />
-        <Cookie name="Oatmeal" />
-        <Cookie name="Sugar" />
-        <Cookie name="Chocolate" />
-        <Cookie name="Newton" />
+        {theCookies}
       </div>
     );
   }

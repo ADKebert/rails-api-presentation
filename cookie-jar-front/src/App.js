@@ -15,13 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>The Cookie Jar</h2>
         </div>
         <div style={GalleryStyles}>
-          <p className="App-intro">
-            Awesome cookie jar goes here
-          </p>
           <CookieJar />
         </div>
       </div>
