@@ -11,25 +11,26 @@ class CookieJar extends Component {
 
   componentWillMount() {
     // With AJAX
-    // fetch('http://localhost:3001/cookies.json', {
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   }
-    // }).then(res => res.json())
-    //   .then(data => this.setState({
-    //                   cookieList: data
-    //                 })
-    //   );
+    fetch('http://localhost:3001/cookies.json', {
+      headers: {
+        'Content-Type' : 'application/json',
+        'accept' : 'application/json; version=1',
+      }
+    }).then(res => res.json())
+      .then(data => this.setState({
+                      cookieList: data
+                    })
+      );
 
       // Default values
-    this.setState({
-      cookieList: [
-        {key:1, value:"Oreo"},
-        {key:2, value:"Oatmeal"},
-        {key:3, value:"Sugar"},
-        {key:4, value:"Chocolate"},
-      ]
-    });
+    // this.setState({
+    //   cookieList: [
+    //     {key:1, value:"Oreo"},
+    //     {key:2, value:"Oatmeal"},
+    //     {key:3, value:"Sugar"},
+    //     {key:4, value:"Chocolate"},
+    //   ]
+    // });
   }
 
   render() {
